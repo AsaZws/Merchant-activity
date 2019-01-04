@@ -1,0 +1,61 @@
+/* 
+
+登陆页面css样式
+name：Asa_Zhou
+data：2019/1/4
+
+*/
+
+.wrap {
+    width: 100%;
+    position: relative;
+}
+.wrap .occlusion {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #2d88ff;
+}
+.wrap .wrap-background img {
+    width: 100%;
+}
+
+/*css3波纹*/
+.wrap-waves {
+  overflow: hidden;
+  height: 4rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.wrap-waves .wave {
+  width: 8rem;
+  transform-origin: center bottom;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.wrap-waves .w1 {
+  background: url(../images/background.png) no-repeat;
+  background-size: cover;
+  height: 0.1rem;
+  animation: anim_wave 5s linear infinite;
+}
+.wrap-waves .w2 {
+  background: url(../images/background1.png) no-repeat;
+  background-size: cover;
+  height: 0.2rem;
+  animation: anim_wave 6s linear infinite;
+}
+@keyframes anim_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
