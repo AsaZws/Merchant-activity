@@ -1,20 +1,17 @@
-/* 
+﻿/* 
 
 登陆页面css样式
 name：Asa_Zhou
 data：2019/1/4
 
 */
-html {
+html,body {
   height: 100%;
   background: #fff;
   overflow: hidden;
 }
-body {
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-}
+html,
+body,
 button,
 p,
 div,

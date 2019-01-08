@@ -1,0 +1,98 @@
+/* 
+
+登陆页面css样式
+name：Asa_Zhou
+data：2019/1/4
+
+*/
+html,
+body {
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+html,
+body,
+button,
+p,
+div,
+form,
+input,
+a,
+i,
+img,
+span,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  out-line: none;
+  color: #fff;
+}
+/* 修改weiui */
+.cancel {
+  color: #2d88ff;
+}
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+    color: #2d88ff;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #2d88ff;
+}
+.swiper-container .swiper-pagination {
+    bottom: 20px;
+}
+
+/* 轮播图 */
+.swiper-container {
+  width: 100%;
+}
+.swiper-container img {
+  display: block;
+  width: 100%;
+}
+
+/* 菜单 */
+.wrap {
+    background: #fff;
+    width: 5.15rem;
+    height: 1rem;
+    border-radius: 50% 50%  0 0;
+    margin: -0.18rem 0 0 -0.7rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.wrap span {
+    display: inline-block;
+    width: 100%;
+    height: 0.2rem;
+}
+.wrap .weui-flex {
+    margin-left: 0.7rem;
+    width: 3.75rem;
+}
+
+.placeholder {
+  margin: 5px;
+  padding: 0 0.1rem;
+  text-align: center;
+  /* color: #2d88ff; */
+  color: #333;
+  font-size: 0.15rem;
+}
+.placeholder img {
+  width: 0.4rem;
+}
+.placeholder p {
+  line-height: 0.14rem;
+}
+.placeholder:active {
+  opacity: 0.6;
+  color: #2d88ff;
+}
