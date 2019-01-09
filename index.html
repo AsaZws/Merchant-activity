@@ -2,15 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="flexible" content="initial-dpr=2" />
     <title>主页</title>
-    <script src="js/base.js"></script>
+    <!-- <script src="js/base.js"></script> -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
-    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <style>
+      
+    </style>
   </head>
   <body>
     <div class="weui-tab">
@@ -50,49 +52,69 @@
             >
           </div>
           <!-- 轮播图 -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
-              <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
-              <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+          <div class="banner">
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
           </div>
           <!-- 菜单 -->
+          <div class="wrap-under"></div>
+          <!-- 底部 -->
           <div class="wrap">
-            <span></span>
-            <div class="weui-flex">
-              <div class="weui-flex__item">
-                <div class="placeholder">
-                  <img src="images/icon_nav_button.png" alt="" />
-                  <p>优惠券</p>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
+                </div>
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
+                </div>
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
+                </div>
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
+                </div>
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
+                </div>
+                <div class="swiper-slide slide">
+                  <div class="placeholder">
+                    <img src="images/icon_nav_button.png" alt="" />
+                    <p>优惠券</p>
+                  </div>
                 </div>
               </div>
-              <div class="weui-flex__item">
-                <div class="placeholder">
-                  <img src="images/icon_nav_button.png" alt="" />
-                  <p>优惠券</p>
-                </div>
-              </div>
-              <div class="weui-flex__item">
-                <div class="placeholder">
-                  <img src="images/icon_nav_button.png" alt="" />
-                  <p>优惠券</p>
-                </div>
-              </div>
-              <div class="weui-flex__item">
-                <div class="placeholder">
-                  <img src="images/icon_nav_button.png" alt="" />
-                  <p>优惠券</p>
-                </div>
-              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
-        <div id="tab2" class="weui-tab__bd-item"><h1>页面二</h1></div>
+
+        <div id="tab2" class="weui-tab__bd-item"><a href="mine.html"></a></div>
       </div>
 
       <div class="weui-tabbar">
@@ -102,7 +124,7 @@
           </div>
           <p class="weui-tabbar__label">主页</p>
         </a>
-        <a href="#tab2" class="weui-tabbar__item">
+        <a href="mine.html" class="weui-tabbar__item">
           <div class="weui-tabbar__icon">
             <img src="images/icon_nav_button.png" alt="" />
           </div>
@@ -112,12 +134,21 @@
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
-    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.1.js"></script>
     <script>
-      $(".swiper-container").swiper({
+      $(".banner .swiper-container").swiper({
         loop: true,
         autoplay: 3000
       });
+
+      var swiper = new Swiper('.wrap .swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      freeMode: true,
+      // scrollbar: {
+      //   el: '.wrap .swiper-scrollbar',
+      // },
+    });
       // $(function() {
       //     FastClick.attach(document.body);
       // });

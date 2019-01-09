@@ -1,6 +1,6 @@
 /* 
 
-登陆页面css样式
+主页面css样式
 name：Asa_Zhou
 data：2019/1/4
 
@@ -8,7 +8,7 @@ data：2019/1/4
 html,
 body {
   height: 100%;
-  background: #fff;
+  background: #f2f2f2;
   overflow: hidden;
 }
 html,
@@ -32,6 +32,9 @@ a {
   text-decoration: none;
   out-line: none;
   color: #fff;
+}
+a:link {
+  text-decoration: none;
 }
 /* 修改weiui */
 .cancel {
@@ -58,41 +61,77 @@ a {
 }
 
 /* 菜单 */
-.wrap {
+.wrap-under {
     background: #fff;
-    width: 5.15rem;
-    height: 1rem;
+    width: 12rem;
+    height: 2rem;
     border-radius: 50% 50%  0 0;
-    margin: -0.18rem 0 0 -0.7rem;
-    text-align: center;
-    position: relative;
+    position: absolute;
+    top: 5.9rem;
+    left: -1rem;
     z-index: 1;
 }
-.wrap span {
-    display: inline-block;
-    width: 100%;
-    height: 0.2rem;
+/* 适配苹果plus6+ */
+@media screen and (min-width:376px) and (max-width:415px) {
+  .wrap-under {
+    background: #fff;
+    width: 24rem;
+    height: 4rem;
+    border-radius: 50% 50%  0 0;
+    position: absolute;
+    top: 10.9rem;
+    left: -2.52rem;
+    z-index: 2;
+  }
 }
-.wrap .weui-flex {
-    margin-left: 0.7rem;
-    width: 3.75rem;
+/* 大于苹果6plus的隐藏 */
+@media screen and (min-width:415px) {
+  .wrap-under {
+    display: none;
+  }
 }
-
-.placeholder {
-  margin: 5px;
-  padding: 0 0.1rem;
+.wrap {
+  background: #fff;
+  width: 100%;
   text-align: center;
-  /* color: #2d88ff; */
+  position: relative;
+  z-index: 2;
+}
+.wrap .placeholder {
+  margin: 8px;
+  text-align: center;
   color: #333;
-  font-size: 0.15rem;
+  font-size: 14px;
 }
-.placeholder img {
-  width: 0.4rem;
+.wrap .placeholder img {
+  width: 3em;
 }
-.placeholder p {
-  line-height: 0.14rem;
+.wrap .placeholder p {
+  line-height: 2em;
 }
-.placeholder:active {
+.wrap .placeholder:active {
   opacity: 0.6;
   color: #2d88ff;
+}
+.wrap .slide {
+  text-align: center;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.wrap .swiper-scrollbar {
+  width: 40%;
+  margin: 0 auto;
 }
