@@ -97,41 +97,16 @@ a:link {
   position: relative;
   z-index: 2;
 }
-.wrap .placeholder {
-  margin: 8px;
-  text-align: center;
-  color: #333;
-  font-size: 14px;
+.wrap .wrap-father::before {
+  border: none;
 }
-.wrap .placeholder img {
-  width: 3em;
+.wrap .wrap-chlid {
+  border: none;
+  padding: 0.6em;
 }
-.wrap .placeholder p {
-  line-height: 2em;
+.wrap .wrap-chlid p {
+  line-height: 1.3em;
 }
-.wrap .placeholder:active {
-  opacity: 0.6;
-  color: #2d88ff;
-}
-.wrap .slide {
-  text-align: center;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.wrap .swiper-scrollbar {
-  width: 40%;
-  margin: 0 auto;
+.wrap .wrap-chlid::before, .wrap .wrap-chlid::after {
+  border: none;
 }

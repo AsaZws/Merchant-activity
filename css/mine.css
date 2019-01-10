@@ -30,10 +30,12 @@ li {
 }
 a {
   text-decoration: none;
-  out-line: none;
   color: #fff;
 }
-a:link {
+a:link, p:link, span:link {
+  text-decoration: none;
+}
+a:focus {
   text-decoration: none;
 }
 /* 修改weiui */
@@ -62,19 +64,28 @@ a:link {
   width: 2em;
   height: 2em;
   position: absolute;
-  top: 2em;
+  top: 1.6em;
   right: 2em;
   background: url(../images/setting.png) no-repeat;
   background-size: 2em;
 }
 .header .personal-information {
-  padding: 0 1em;
-  line-height: 7em;
+  width: 100%;
+  padding: 0 1.3em;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.header .personal-information::after {
-  
+.header .personal-information strong {
+  display: inline-block;
+  width: 1.2em;
+  height: 2em;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 1.2em 2em;
 }
-.header .avatar {
+.header .personal img {
   width: 7em;
   height: 7em;
   border-radius: 50%;
@@ -82,8 +93,10 @@ a:link {
   margin-right: 1em;
 }
 .header .personal {
-  display: inline-block;
   color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .header .personal p {
   font-size: 20px;
@@ -93,6 +106,7 @@ a:link {
   font-size: 16px;
 }
 
+/* 我的账户 */
 .account {
   text-align: center;
 }
@@ -107,5 +121,8 @@ a:link {
   line-height: 2em;
 }
 .account .account-message {
-  line-height: 4em;
+  border-right: 1px dashed #ccc;
+}
+.account .account-message:nth-last-child(1) {
+  border: none;
 }
