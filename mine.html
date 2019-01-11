@@ -8,11 +8,11 @@
     />
     <meta name="flexible" content="initial-dpr=2" />
     <title>我的</title>
+    <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
-    <link rel="stylesheet" href="css/jquery-weui.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/mine.css" />
     <style></style>
   </head>
   <body>
@@ -25,7 +25,7 @@
           <!-- 头部 -->
           <div class="header">
             <div class="setting"></div>
-            <a href="personal.html" class="personal-information">
+            <a href="personal.html" class="personal-information show-loading">
               <div class="personal">
                 <img src="images/avatar.jpg" alt="">
                 <div class="personal-message">
@@ -38,7 +38,6 @@
           </div>
           <!-- 我的账户 -->
           <div class="weui-cells">
-              <!-- <div class="weui-cells__title">我的账户</div> -->
               <div class="weui-cell weui-flex account">
                 <div class="weui-flex__item account-message">
                   <span>我的资产(元)</span>
@@ -55,7 +54,7 @@
             <div class="weui-panel__bd">
               <div class="weui-media-box weui-media-box_small-appmsg">
                 <div class="weui-cells">
-                  <a class="weui-cell weui-cell_access" href="javascript:;">
+                  <a class="weui-cell weui-cell_access show-loading" href="history.html">
                     <div class="weui-cell__hd">
                       <img
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
@@ -89,7 +88,7 @@
       </div>
 
       <div class="weui-tabbar">
-        <a href="index.html" class="weui-tabbar__item">
+        <a href="index.html" class="weui-tabbar__item show-loading">
           <div class="weui-tabbar__icon">
             <img src="images/icon_nav_button.png" alt="" />
           </div>
@@ -105,6 +104,14 @@
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
-    <script src="js/swiper.1.js"></script>
+    <script>
+      $(document).on("click", ".show-loading", function() {
+          $.showLoading();
+
+          setTimeout(function() {
+            $.hideLoading();
+          }, 3000)
+        });
+    </script>
   </body>
 </html>

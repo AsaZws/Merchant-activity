@@ -8,11 +8,11 @@
     />
     <meta name="flexible" content="initial-dpr=2" />
     <title>个人信息</title>
+    <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
-    <link rel="stylesheet" href="css/jquery-weui.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/personal.css" />
     <style></style>
   </head>
 
@@ -25,7 +25,9 @@
             <div class="weui-cell__bd">
               <p>头像</p>
             </div>
-            <img src="images/avatar.jpg" alt="" class="weui-cell__ft wrap-avatar">
+            <div class="weui-cell__ft">
+              <img src="images/avatar.jpg" alt="" class="wrap-avatar">
+            </div>
           </a>
           <a class="weui-cell weui-cell_access" href="javascript:;">
             <div class="weui-cell__bd">
@@ -51,10 +53,18 @@
       </div>
     </div>
     <div class='demos-content-padded'>
-      <a href="javascript:;" class="weui-btn weui-btn_warn">安全退出</a>
+        <a href="javascript:;" id='show-confirm' class="weui-btn weui-btn_primary">安全退出</a>
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
-    <script src="js/swiper.1.js"></script>
+    <script>
+    $(document).on("click", "#show-confirm", function() {
+        $.confirm("您确定要退出本账号吗?", "确认退出?", function() {
+          $.toast("账号已经退出");
+        }, function() {
+          //取消操作
+        });
+      });
+    </script>
   </body>
 </html>

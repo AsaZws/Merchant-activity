@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="flexible" content="initial-dpr=2" />
     <title>主页</title>
-    <!-- <script src="js/base.js"></script> -->
+    <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
-    <link rel="stylesheet" href="css/jquery-weui.css" />
-    <link rel="stylesheet" href="https://www.swiper.com.cn/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <style>
       
@@ -142,7 +141,7 @@
           </div>
           <p class="weui-tabbar__label">主页</p>
         </a>
-        <a href="mine.html" class="weui-tabbar__item">
+        <a href="mine.html" class="weui-tabbar__item show-loading">
           <div class="weui-tabbar__icon">
             <img src="images/icon_nav_button.png" alt="" />
           </div>
@@ -152,15 +151,19 @@
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
-    <script src="js/swiper.1.js"></script>
+    <script src="js/swiper.js"></script>
     <script>
       $(".banner .swiper-container").swiper({
         loop: true,
         autoplay: 3000
       });
-      // $(function() {
-      //     FastClick.attach(document.body);
-      // });
+      $(document).on("click", ".show-loading", function() {
+        $.showLoading();
+
+        setTimeout(function() {
+          $.hideLoading();
+        }, 3000)
+      });
     </script>
     <script></script>
   </body>

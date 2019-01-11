@@ -90,6 +90,7 @@ a:link {
     display: none;
   }
 }
+/* 菜单 */
 .wrap {
   background: #fff;
   width: 100%;
@@ -109,4 +110,109 @@ a:link {
 }
 .wrap .wrap-chlid::before, .wrap .wrap-chlid::after {
   border: none;
+}
+
+/* 我的 */
+.header {
+  width: 100%;
+  height: 14em;
+  background: #2d88ff;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header .setting {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: 1.6em;
+  right: 2em;
+  background: url(../images/setting.png) no-repeat;
+  background-size: 2em;
+}
+.header .personal-information {
+  width: 100%;
+  padding: 0 1.3em;
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .personal-information strong {
+  display: inline-block;
+  width: 1.2em;
+  height: 2em;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 1.2em 2em;
+}
+.header .personal img {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: 0.3em solid #f2f2f2;
+  margin-right: 1em;
+}
+.header .personal {
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.header .personal p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.header .personal span {
+  font-size: 16px;
+}
+
+/* 我的账户 */
+.account {
+  text-align: center;
+}
+.account span {
+  color: #333;
+}
+.account i {
+  display: block;
+  font-style: normal;
+  font-size: 16px;
+  color: #999;
+  line-height: 2em;
+}
+.account .account-message {
+  border-right: 1px dashed #ccc;
+}
+.account .account-message:nth-last-child(1) {
+  border: none;
+}
+
+/* 头像 */
+.bd .wrap-avatar {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+.demos-content-padded {
+  padding: 2em;
+}
+
+/* 历史记录 */
+.weui-media-box__hd img {
+  border-radius: 50%;
+}
+.weui-media-box__bd .wrap-history {
+  color: #555;
+  font-size: 20px;
+}
+.weui-media-box__bd .wrap-history span {
+  color: #333;
+  font-size: 24px;
+}
+.weui-media-box__bd .wrap-history-bottom {
+  color: #999;
+}
+.weui-media-box__bd .wrap-history-bottom span {
+  font-size: 16px;
 }
