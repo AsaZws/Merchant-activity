@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <meta name="flexible" content="initial-dpr=2" />
     <title>主页</title>
     <!-- 手淘网适配移动端js -->
@@ -10,11 +13,10 @@
     <link rel="stylesheet" href="css/weui.min.css" />
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="css/binding.css" />
+    <style></style>
   </head>
-  <body>
+  <body style="overflow: hidden;">
     <div class="weui-tab">
       <div class="weui-tab__bd">
         <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
@@ -25,7 +27,7 @@
                 <i class="weui-icon-search"></i>
                 <input
                   type="search"
-                  class="weui-search-bar__input"
+                  class="weui-search-bar__input plate"
                   id="searchInput"
                   placeholder="搜索"
                   required=""
@@ -57,9 +59,15 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
-                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
-                <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+                <div class="swiper-slide">
+                  <img src="images/swiper-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/swiper-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/swiper-1.jpg" />
+                </div>
               </div>
               <!-- If we need pagination -->
               <div class="swiper-pagination"></div>
@@ -72,63 +80,47 @@
             <div class="weui-grids wrap-father">
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/add-license-plate.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">添加车辆</p>
               </a>
+
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/look-forward-to.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">敬请期待</p>
               </a>
+
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/look-forward-to.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">敬请期待</p>
               </a>
+
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/look-forward-to.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">敬请期待</p>
               </a>
+
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/look-forward-to.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">敬请期待</p>
               </a>
+
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
+                  <img src="images/look-forward-to.png" alt="" />
                 </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
-              </a>
-              <a href="" class="weui-grid js_grid wrap-chlid">
-                <div class="weui-grid__icon">
-                  <img src="images/icon_nav_button.png" alt="">
-                </div>
-                <p class="weui-grid__label">
-                  Button
-                </p>
+                <p class="weui-grid__label">敬请期待</p>
               </a>
             </div>
           </div>
-
         </div>
 
         <div id="tab2" class="weui-tab__bd-item"><a href="mine.html"></a></div>
@@ -137,21 +129,118 @@
       <div class="weui-tabbar">
         <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
           <div class="weui-tabbar__icon">
-            <img src="images/icon_nav_button.png" alt="" />
+            <img src="images/home-on.png" alt="主页" />
           </div>
           <p class="weui-tabbar__label">主页</p>
         </a>
         <a href="mine.html" class="weui-tabbar__item show-loading">
           <div class="weui-tabbar__icon">
-            <img src="images/icon_nav_button.png" alt="" />
+            <img src="images/nav-my-off.png" alt="我的" />
           </div>
           <p class="weui-tabbar__label">我的</p>
         </a>
       </div>
     </div>
+    <div class="keyboard-footer">
+        <!-- 键盘 -->
+        <div class="keyboard" id="shutkey">
+          <div class="shut" id="shut">关闭</div>
+          <ul id="keyboard">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+
+            <li>Q</li>
+            <li>W</li>
+            <li>E</li>
+            <li>R</li>
+            <li>T</li>
+            <li>Y</li>
+            <li>U</li>
+            <li>P</li>
+            <li>港</li>
+            <li>澳</li>
+
+            <li>A</li>
+            <li>S</li>
+            <li>D</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>J</li>
+            <li>K</li>
+            <li>L</li>
+            <li>学</li>
+
+            <li>Z</li>
+            <li>X</li>
+            <li>C</li>
+            <li>V</li>
+            <li>B</li>
+            <li>N</li>
+            <li>M</li>
+            <li>警</li>
+            <p class="delet" id="delet">删除</p>
+          </ul>
+        </div>
+        <!-- 地区车牌简称 -->
+        <div class="area" id="area">
+          <div class="shut" id="shuta">关闭</div>
+          <ul id="keyboarda">
+            <div class="area-one">
+              <li>京</li>
+              <li>津</li>
+              <li>沪</li>
+              <li>渝</li>
+              <li>蒙</li>
+              <li>新</li>
+              <li>藏</li>
+              <li>宁</li>
+              <li>桂</li>
+              <li>黑</li>
+            </div>
+            <div class="area-tow">
+              <li>吉</li>
+              <li>辽</li>
+              <li>晋</li>
+              <li>冀</li>
+              <li>青</li>
+              <li>鲁</li>
+              <li>豫</li>
+              <li>苏</li>
+              <li>皖</li>
+            </div>
+            <div class="area-three">
+              <li>浙</li>
+              <li>闽</li>
+              <li>赣</li>
+              <li>湘</li>
+              <li>鄂</li>
+              <li>粤</li>
+              <li>琼</li>
+              <li>甘</li>
+            </div>
+            <div class="area-four">
+              <li>陕</li>
+              <li>贵</li>
+              <li>云</li>
+              <li>川</li>
+              <!-- <li>删除</li> -->
+            </div>
+          </ul>
+        </div>
+      </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
     <script src="js/swiper.js"></script>
+    <script src="js/binding.js"></script>
     <script>
       $(".banner .swiper-container").swiper({
         loop: true,
@@ -162,7 +251,7 @@
 
         setTimeout(function() {
           $.hideLoading();
-        }, 3000)
+        }, 3000);
       });
     </script>
     <script></script>

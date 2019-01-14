@@ -9,7 +9,6 @@ html,
 body {
   height: 100%;
   background: #f2f2f2;
-  overflow: hidden;
 }
 html,
 body,
@@ -50,6 +49,17 @@ a:link {
 .swiper-container .swiper-pagination {
     bottom: 20px;
 }
+.weui-btn_primary {
+  background: #2d88ff;
+}
+.weui-btn_primary:not(.weui-btn_disabled):active{
+  color:rgba(255, 255, 255, 0.6);
+  background: #2d88ff;
+  opacity: 0.8;
+}
+.weui-dialog__btn {
+  color: #2d88ff;
+}
 
 /* 轮播图 */
 .swiper-container {
@@ -70,6 +80,10 @@ a:link {
     top: 5.9rem;
     left: -1rem;
     z-index: 1;
+}
+.weui-grid__icon {
+  width: 4em;
+  height: 4em;
 }
 /* 适配苹果plus6+ */
 @media screen and (min-width:376px) and (max-width:415px) {
@@ -104,9 +118,6 @@ a:link {
 .wrap .wrap-chlid {
   border: none;
   padding: 0.6em;
-}
-.wrap .wrap-chlid p {
-  line-height: 1.3em;
 }
 .wrap .wrap-chlid::before, .wrap .wrap-chlid::after {
   border: none;
@@ -204,15 +215,38 @@ a:link {
 }
 .weui-media-box__bd .wrap-history {
   color: #555;
-  font-size: 20px;
+  font-size: 18px;
 }
 .weui-media-box__bd .wrap-history span {
   color: #333;
-  font-size: 24px;
+  font-size: 20px;
 }
 .weui-media-box__bd .wrap-history-bottom {
   color: #999;
 }
 .weui-media-box__bd .wrap-history-bottom span {
+  font-size: 16px;
+}
+/* 修改密码 */
+.change-password {
+  width: 92%; 
+  margin: 0 auto; 
+}
+
+/* 历史详情 */
+.demos-header {
+  text-align: center;
+  height: 4em;
+  line-height: 4em;
+}
+.history-record label {
+  color: #2d88ff;
+  font-size: 24px;
+}
+.history-record em {
+  font-size: 48px;
+}
+.history-record-details label, .history-record-details span {
+  color: #555;
   font-size: 16px;
 }

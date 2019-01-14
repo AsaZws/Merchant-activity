@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta name="flexible" content="initial-dpr=2" />
-    <title>个人信息</title>
+    <title>历史记录</title>
     <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
@@ -17,34 +17,47 @@
   </head>
 
   <body>
-
     <div class="page__pd">
       <!-- 搜索 -->
       <div class="weui-search-bar" id="searchBar">
         <form class="weui-search-bar__form" action="#">
           <div class="weui-search-bar__box">
             <i class="weui-icon-search"></i>
-            <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+            <input
+              type="search"
+              class="weui-search-bar__input"
+              id="searchInput"
+              placeholder="搜索"
+              required=""
+            />
             <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
           </div>
-          <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
-            <i class="weui-icon-search"></i>
-            <span>搜索</span>
+          <label
+            class="weui-search-bar__label"
+            id="searchText"
+            style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"
+          >
+            <i class="weui-icon-search"></i> <span>搜索</span>
           </label>
         </form>
-        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        <a
+          href="javascript:"
+          class="weui-search-bar__cancel-btn"
+          id="searchCancel"
+          >取消</a
+        >
       </div>
 
       <div class="weui-panel weui-panel_access">
-        <div class="weui-panel__bd">
-          <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+        <div class="weui-panel__bd" id="list">
+
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
             <div class="weui-media-box__hd">
-              <img class="weui-media-box__thumb" src="images/avatar.jpg" alt="">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
             </div>
             <div class="weui-media-box__bd">
               <h4 class="weui-media-box__title wrap-history">
-                粤B123456
-                <span class="weui-media-box__title-after">-20元</span>
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
               </h4>
               <div class="weui-media-box__title wrap-history-bottom">
                 2019-01-12
@@ -53,25 +66,134 @@
             </div>
           </a>
           
-          <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
-              <div class="weui-media-box__hd">
-                <img class="weui-media-box__thumb" src="images/avatar.jpg" alt="">
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
               </div>
-              <div class="weui-media-box__bd">
-                <h4 class="weui-media-box__title wrap-history">
-                  粤B123456
-                  <span class="weui-media-box__title-after">-20元</span>
-                </h4>
-                <div class="weui-media-box__title wrap-history-bottom">
-                  2019-01-12
-                  <span class="weui-media-box__title-after">临时停车</span>
-                </div>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
               </div>
-            </a>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
+              </div>
+            </div>
+          </a>
+          
+          <a href="history-record.html" class="weui-media-box weui-media-box_appmsg" >
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="images/history.png" alt="" />
+            </div>
+            <div class="weui-media-box__bd">
+              <h4 class="weui-media-box__title wrap-history">
+                粤B123456 <span class="weui-media-box__title-after">-20元</span>
+              </h4>
+              <div class="weui-media-box__title wrap-history-bottom">
+                2019-01-12
+                <span class="weui-media-box__title-after">临时停车</span>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
     </div>
+    <div class="weui-loadmore">
+      <i class="weui-loading"></i>
+      <span class="weui-loadmore__tips">正在加载</span>
+    </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
+    <script>
+      var loading = false;
+      var history =
+        '<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"><div class="weui-media-box__hd"><img class="weui-media-box__thumb" src="images/history.png" alt="" /></div><div class="weui-media-box__bd"><h4 class="weui-media-box__title wrap-history">粤B123456 <span class="weui-media-box__title-after">-20元</span></h4><div class="weui-media-box__title wrap-history-bottom">2019-01-12<span class="weui-media-box__title-after">临时停车</span></div></div></a>';
+      $(document.body)
+        .infinite()
+        .on("infinite", function() {
+          if (loading) return;
+          loading = true;
+          setTimeout(function() {
+            $("#list").append(history);
+            loading = false;
+          }, 2000);
+        });
+    </script>
   </body>
 </html>

@@ -10,7 +10,7 @@
     <title>个人信息</title>
     <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/weui.min.css" />  
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <style></style>
@@ -22,12 +22,13 @@
       <div class="page__bd">
         <div class="weui-cells">
           <a class="weui-cell weui-cell_access" href="javascript:;">
-            <div class="weui-cell__bd">
-              <p>头像</p>
-            </div>
-            <div class="weui-cell__ft">
-              <img src="images/avatar.jpg" alt="" class="wrap-avatar">
-            </div>
+              <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+              <div class="weui-cell__bd">
+                <p>头像</p>
+              </div>
+              <div class="weui-cell__ft">
+                <img src="images/avatar.jpg" alt="" class="wrap-avatar">
+              </div>
           </a>
           <a class="weui-cell weui-cell_access" href="javascript:;">
             <div class="weui-cell__bd">
@@ -43,7 +44,7 @@
           </a>
         </div>
         <div class="weui-cells">
-          <a class="weui-cell weui-cell_access" href="javascript:;">
+          <a class="weui-cell weui-cell_access" href="change-password.html">
             <div class="weui-cell__bd">
               <p>修改密码</p>
             </div>
