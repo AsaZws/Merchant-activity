@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>停车优惠</title>
+    <!-- 手淘网适配移动端js -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/binding.css" />
+  </head>
+
+  <body style="overflow: hidden;">
+    <!-- 车牌 -->
+    <div class="plate">
+      <ul id="plate">
+        <li>粤</li>
+        <li>B</li>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>
+          <div class="new"><span>+</span> <i>新能源</i></div>
+        </li>
+      </ul>
+    </div>
+    <div class="weui-form-preview">
+        <!-- 查询车牌 -->
+        <div class='demos-content-padded'>
+          <a href="javascript:;" class="weui-btn weui-btn_primary" id="inquire">查询车牌</a>
+        </div>
+      <!-- 停车信息 -->
+      <div id="parking_information" class="weui-form-preview__bd history-record-details parking_information">
+        <div class="weui-form-preview__item">
+          <label class="weui-form-preview__label">车牌号码：</label>
+          <span class="weui-form-preview__value">粤B123456</span>
+        </div>
+        <div class="weui-form-preview__item">
+          <label class="weui-form-preview__label">停车车场：</label>
+          <span class="weui-form-preview__value">鲤鱼门西街公共停车场</span>
+        </div>
+        <div class="weui-form-preview__item">
+          <label class="weui-form-preview__label">入场时间：</label>
+          <span class="weui-form-preview__value">2019-01-03 10:49:44</span>
+        </div>
+        <div class="weui-form-preview__item">
+          <label class="weui-form-preview__label">停车时长：</label>
+          <span class="weui-form-preview__value">10时56分01秒</span>
+        </div>
+      </div>
+      <!-- 优惠方式 -->
+      <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label for="name" class="weui-label">优惠方式：</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" id="job" type="text" value="点我选择优惠方式">
+          </div>
+        </div>
+        <div class="weui-cell" id="input_data">
+          <div class="weui-cell__hd"><label class="weui-label">输入数字：</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="number" pattern="[0-9]*" placeholder="单位为(元)或者(小时)">
+          </div>
+        </div>
+      </div>
+      <!-- 提交 -->
+      <div class='demos-content-padded'>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+      </div>
+    </div>
+    <!-- 虚拟键盘 -->
+    <div class="keyboard-footer">
+        <!-- 键盘 -->
+        <div class="keyboard" id="shutkey">
+          <div class="shut" id="shut">关闭</div>
+          <ul id="keyboard">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+
+            <li>Q</li>
+            <li>W</li>
+            <li>E</li>
+            <li>R</li>
+            <li>T</li>
+            <li>Y</li>
+            <li>U</li>
+            <li>P</li>
+            <li>港</li>
+            <li>澳</li>
+
+            <li>A</li>
+            <li>S</li>
+            <li>D</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>J</li>
+            <li>K</li>
+            <li>L</li>
+            <li>学</li>
+
+            <li>Z</li>
+            <li>X</li>
+            <li>C</li>
+            <li>V</li>
+            <li>B</li>
+            <li>N</li>
+            <li>M</li>
+            <li>警</li>
+            <li class="delet">删除</li>
+          </ul>
+        </div>
+        <!-- 地区车牌简称 -->
+        <div class="area" id="area">
+          <div class="shut" id="shuta">关闭</div>
+          <ul id="keyboarda">
+            <div class="area-one">
+              <li>京</li>
+              <li>津</li>
+              <li>沪</li>
+              <li>渝</li>
+              <li>蒙</li>
+              <li>新</li>
+              <li>藏</li>
+              <li>宁</li>
+              <li>桂</li>
+              <li>黑</li>
+            </div>
+            <div class="area-tow">
+              <li>吉</li>
+              <li>辽</li>
+              <li>晋</li>
+              <li>冀</li>
+              <li>青</li>
+              <li>鲁</li>
+              <li>豫</li>
+              <li>苏</li>
+              <li>皖</li>
+            </div>
+            <div class="area-three">
+              <li>浙</li>
+              <li>闽</li>
+              <li>赣</li>
+              <li>湘</li>
+              <li>鄂</li>
+              <li>粤</li>
+              <li>琼</li>
+              <li>甘</li>
+            </div>
+            <div class="area-four">
+              <li>陕</li>
+              <li>贵</li>
+              <li>云</li>
+              <li>川</li>
+              <!-- <li>删除</li> -->
+            </div>
+          </ul>
+        </div>
+    </div>
+
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/binding.js"></script>
+    <script>
+      // 点击查询车牌显示停车信息
+      $(document).on("click", "#inquire", function() {
+          $("#parking_information").show();
+        });
+      $("#job").select({
+        title: "选择优惠方式",
+        items: ["金额优惠", "时间优惠", "全部免费"],
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function() {
+          console.log("close");
+        },
+        onOpen: function() {
+          console.log("open");
+        },
+        function() {
+          if($("#job").value() === "全部免费") {
+            $("#input_data").hide();
+          } else {
+            $("#input_data").show();
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

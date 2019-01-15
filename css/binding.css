@@ -1,4 +1,107 @@
 
+.plate {
+    height: 6em;
+    margin-top: 1em;
+    overflow: hidden;
+}
+.plate ul {
+    height: 6em;
+    display: flex;
+    justify-content: center;
+}
+.plate li {
+    width: 1.88em;
+    height: 2.8em;
+    line-height: 2.8em;
+    border: 1px solid #eee;
+    margin-right: -1px;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+/* 手机屏幕大于410的屏幕 */
+@media screen and ( min-width: 410px ) {
+    .plate {
+        height: 6.6em;
+        margin-top: 1em;
+        overflow: hidden;
+    }
+    .plate ul {
+        height: 6.6em;
+        display: flex;
+        justify-content: center;
+    }
+    .plate li {
+        width: 2em;
+        height: 3em;
+        line-height: 3em;
+        border: 0.02rem solid #eee;
+        margin-right: -1px;
+        background-color: #fff;
+        font-size: 22px;
+        text-align: center;
+    }
+    .plate li:nth-last-child(1) span {
+        display: block;
+        width: 0.46rem;
+        height: 0.46rem;
+        line-height: 0.2rem;
+        font-size: 0.24rem;
+        border: 0.01rem solid #2d88ff;
+        border-radius: 50%;
+        margin: 0.48rem auto 0;
+    }
+    .plate li:nth-last-child(1) i {
+        display: block;
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    .plate li:nth-child(2) {
+        margin-right: 0.4rem;
+    }
+}
+/* 手机屏幕小于360的屏幕 */
+@media screen and ( max-width: 360px ) {
+    .plate li {
+        width: 1.6em;
+        height: 3em;
+        line-height: 3em;
+        border: 0.02rem solid #eee;
+        margin-right: -1px;
+        background-color: #fff;
+        font-size: 22px;
+        text-align: center;
+    }
+}
+.plate .active {
+    border: 1px solid #2d88ff;
+    z-index: 99;
+}
+.plate li .new {
+    color: #2d88ff;
+}
+.plate li:nth-last-child(1) span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    line-height: 0.88em;
+    font-size: 0.4rem;
+    border: 1px solid #2d88ff;
+    border-radius: 50%;
+    margin: 0.6em auto 0;
+}
+.plate li:nth-last-child(1) i {
+    display: block;
+    font-style: normal;
+    font-size: 0.56em;
+    line-height: 2em;
+    margin-bottom: 0.2rem;
+}
+.plate li:nth-child(2) {
+    margin-right: 0.4rem;
+}
+
 /* 父级基础字号 */
 .keyboard-footer {
     font-size: 16px;
@@ -45,6 +148,9 @@
     margin: 0 0.25em 0.5em 0;
     box-shadow: 0 0.125em 0 #aaa;
     list-style: none;
+}
+.keyboard li:active, .keyboard .delet:active {
+    background: #999;
 }
 .keyboard li:nth-child(10n) {
     margin-right: 0;
@@ -96,6 +202,9 @@
     margin: 0 0.25em 0.5em 0;
     box-shadow: 0 0.125em 0 #aaa;
     list-style: none;
+}
+.area li:active {
+    background: #999;
 }
 .area li:nth-child(10n) {
     margin-right: 0;

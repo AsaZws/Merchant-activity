@@ -180,20 +180,21 @@
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.js"></script>
+    <!-- 懒加载 -->
     <script>
-      var loading = false;
-      var history =
-        '<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"><div class="weui-media-box__hd"><img class="weui-media-box__thumb" src="images/history.png" alt="" /></div><div class="weui-media-box__bd"><h4 class="weui-media-box__title wrap-history">粤B123456 <span class="weui-media-box__title-after">-20元</span></h4><div class="weui-media-box__title wrap-history-bottom">2019-01-12<span class="weui-media-box__title-after">临时停车</span></div></div></a>';
-      $(document.body)
-        .infinite()
-        .on("infinite", function() {
-          if (loading) return;
-          loading = true;
-          setTimeout(function() {
-            $("#list").append(history);
-            loading = false;
-          }, 2000);
-        });
+      // var loading = false;
+      // var history =
+      //   '<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"><div class="weui-media-box__hd"><img class="weui-media-box__thumb" src="images/history.png" alt="" /></div><div class="weui-media-box__bd"><h4 class="weui-media-box__title wrap-history">粤B123456 <span class="weui-media-box__title-after">-20元</span></h4><div class="weui-media-box__title wrap-history-bottom">2019-01-12<span class="weui-media-box__title-after">临时停车</span></div></div></a>';
+      // $(document.body)
+      //   .infinite()
+      //   .on("infinite", function() {
+      //     if (loading) return;
+      //     loading = true;
+      //     setTimeout(function() {
+      //       $("#list").append(history);
+      //       loading = false;
+      //     }, 2000);
+      //   });
     </script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>修改昵称</title>
+    <!-- 手淘网适配移动端js -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="css/weui.min.css" />  
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style></style>
+  </head>
+
+  <body>
+
+    <div class="bd">
+      <div class="weui-cells__title">请输入你的昵称</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="2-8位">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='demos-content-padded'>
+        <a href="javascript:;" id='show-confirm' class="weui-btn weui-btn_primary">提交</a>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script>
+    $(document).on("click", "#show-confirm", function() {
+        $.confirm("你确认要修改此昵称吗?", "确认提交?", function() {
+          $.toast("昵称修改成功");
+        }, function() {
+          //取消操作
+        });
+      });
+    </script>
+  </body>
+</html>
