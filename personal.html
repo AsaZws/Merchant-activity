@@ -9,7 +9,7 @@
     <meta name="flexible" content="initial-dpr=2" />
     <title>个人信息</title>
     <!-- 手淘网适配移动端js -->
-    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script> -->
     <link rel="stylesheet" href="css/weui.min.css" />  
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -20,6 +20,16 @@
 
     <div class="bd">
       <div class="page__bd">
+        <!-- 顶部菜单 -->
+        <div class="weui-flex invoice-head">
+          <div class="weui-flex__item return">
+            <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+          </div>
+          <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
+          <div class="homepage">
+            <a href="index.html"></a>
+          </div>
+        </div>
         <div class="weui-cells">
           <a class="weui-cell weui-cell_access" href="javascript:;">
               <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">

@@ -45,15 +45,23 @@ a:link {
 .weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
     color: #2d88ff;
 }
+.weui-navbar__item.weui-bar__item--on {
+  background: #d3e8ff;
+  color: #2d88ff;
+}
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: #2d88ff;
 }
 .swiper-container .swiper-pagination {
-    bottom: 20px;
+  bottom: 20px;
 }
 .weui-btn_primary {
   background: #2d88ff;
+}
+.weui-btn_mini {
+  font-size: 18px;
+  align-items: center;
 }
 .weui-btn_primary:not(.weui-btn_disabled):active{
   color:rgba(255, 255, 255, 0.6);
@@ -61,8 +69,7 @@ a:link {
   opacity: 0.8;
 }
 .weui-form-preview {
-  border-radius: 1.6em 1.6em 0 0;
-  height: 100%;
+  margin-bottom: 1em;
 }
 .weui-label {
   color: #888;
@@ -86,6 +93,21 @@ a:link {
 }
 .weui-cells_radio .weui-check:checked+.weui-icon-checked:before {
   color: #2d88ff;
+}
+.weui-form-preview__btn_primary {
+  color: #2d88ff;
+}
+.weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before {
+  color: #2d88ff;
+}
+.weui-cells {
+  margin-top: 0;
+}
+.weui-dialog__btn {
+  color: #2d88ff;
+}
+.invoice-n {
+  height: 70%;
 }
 
 /* 轮播图 */
@@ -285,4 +307,65 @@ a:link {
 /* 优惠车辆 */
 .parking_information {
   display: none;
+}
+
+/* 发票管理 */
+.invoice-head {
+  height: 3em;
+  text-align: right;
+  align-items: center;
+  justify-content: center;
+}
+.invoice-head .return {
+  text-align: left;
+}
+.invoice-head .invoice-return {
+  display: block;
+  width: 2.4em;
+  height: 1em;
+  line-height: 1em;
+  background: url(../images/return.png) no-repeat;
+  background-size: 0.7em 1em;
+  font-size: 18px;
+  color: #808080;
+  margin-left: 1em;
+  padding-left: 0.9em;
+}
+.invoice-new {
+  font-size: 18px;
+  color: #2d88ff;
+  font-size: 18px;
+  color: #808080;
+  padding-left: 0.9em;
+  margin-right: 1em;
+}
+.homepage {
+  width: 1.6em;
+  height: 1.4em;
+  margin-right: 1em;
+}
+.homepage a {
+  display: block;
+  width: 1.6em;
+  height: 1.4em;
+  background: url(../images/home.png) no-repeat;
+  background-size: 1.6em 1.4em;
+}
+.next-step {
+  text-align: center;
+}
+.next-step .weui-btn_mini {
+  margin-top: 0.3em;
+}
+.select-all {
+  font-size: 16px;
+  color: #2d88ff;
+}
+.next-step .placeholder {
+  padding: 0.58em;
+  font-size: 14px;
+}
+.next-step .placeholder span {
+  color: #2d88ff;
+  font-size: 16px;
 }

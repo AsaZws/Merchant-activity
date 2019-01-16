@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>新增发票抬头</title>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+      <!-- 顶部菜单 -->
+      <div class="weui-flex invoice-head">
+        <div class="weui-flex__item return">
+          <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+        </div>
+        <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
+        <div class="homepage">
+          <a href="index.html"></a>
+        </div>
+      </div>
+      <div class="weui-tab invoice-n">
+        <div class="weui-navbar">
+          <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+            公司发票
+          </a>
+          <a class="weui-navbar__item" href="#tab3">
+            个人发票
+          </a>
+        </div>
+        <div class="weui-tab__bd">
+          <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <!-- 公司电子发票信息 -->
+            <div class="weui-cells__title"></div>
+            <div class="weui-cells weui-cells_form">
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">发票抬头：</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="text" placeholder="请输入发票抬头">
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">税号：</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="text" placeholder="请输入税号">
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">手机：</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入手机号码">
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">邮箱：</label></div>
+                <div class="weui-cell__bd">
+                  <input class="weui-input" type="text" placeholder="请输入电子发票能收到的邮箱">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab3" class="weui-tab__bd-item">
+              <!-- 个人电子发票信息 -->
+              <div class="weui-cells__title"></div>
+              <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                  <div class="weui-cell__hd"><label class="weui-label">发票抬头：</label></div>
+                  <div class="weui-cell__hd"><label class="weui-label">个人</label></div>
+                </div>
+                <div class="weui-cell">
+                  <div class="weui-cell__hd"><label class="weui-label">手机：</label></div>
+                  <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入手机号码">
+                  </div>
+                </div>
+                <div class="weui-cell">
+                  <div class="weui-cell__hd"><label class="weui-label">邮箱：</label></div>
+                  <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入电子发票能收到的邮箱">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- 提交 -->
+      <div class='demos-content-padded'>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+      </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script>
+    </script>
+  </body>
+</html>

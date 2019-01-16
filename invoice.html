@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>开票管理</title>
+    <!-- 手淘网适配移动端js -->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+
+      <div class="weui-tab">
+        <div class="weui-tab__bd">
+            <div class="weui-tab__bd-item weui-tab__bd-item--active">
+              <!-- 抬头 -->
+              <div class="weui-flex invoice-head">
+                <div class="weui-flex__item return">
+                  <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+                </div>
+                <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
+                <div class="weui-flex__item">
+                  <a href="invoice-new.html" class="invoice-new">发票抬头</a>
+                </div>
+              </div>
+              <!-- 充值记录 -->
+              <div class="weui-panel weui-panel_access">
+                <div id="check_invoice" class="weui-cells weui-cells_checkbox">
+                  <label class="weui-cell weui-check__label">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                  <label class="weui-cell weui-check__label">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" disabled='true' name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                  <label class="weui-cell weui-check__label">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                  <label class="weui-cell weui-check__label">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                  <label class="weui-cell weui-check__label" for="s13">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                  <label class="weui-cell weui-check__label">
+                    <div class="weui-cell__hd">
+                      <input type="checkbox" class="weui-check" name="checkbox1">
+                      <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
+                          <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title wrap-history">
+                              钱包充值 <span class="weui-media-box__title-after">-200元</span>
+                            </h4>
+                            <div class="weui-media-box__title wrap-history-bottom">
+                              2019-01-12<span class="weui-media-box__title-after">小招</span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="weui-tabbar">
+            <div class="weui-flex__item next-step"><div class="placeholder">金额:<span>￥200元</span></div></div>
+            <div class="weui-flex__item">
+              <div class="weui-cells_checkbox" id="select_all">
+                <label class="weui-cell weui-ch2.eck__label">
+                  <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check select_all" name="checkbox1">
+                    <i class="weui-icon-checked"></i>
+                  </div>
+                  <div class="weui-cell__bd select-all">
+                    <p>全选</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="weui-flex__item next-step">
+              <a href="invoice-head.html" class="weui-btn weui-btn_mini weui-btn_primary">下一步</a>
+            </div>
+        </div>
+      </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.js"></script>
+    <script>
+      // 点击全选
+      $(function(){
+        $(".select_all").click(function(){
+          if(this.checked){
+            $("input[type=checkbox]").prop("checked", "true");
+          }else{
+            $("input[type='checkbox']").each(function(){
+              this.checked=false;
+            });
+          }
+        });         
+      });
+    </script>
+  </body>
+</html>
