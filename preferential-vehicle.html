@@ -13,10 +13,32 @@
     <link rel="stylesheet" href="css/weui.min.css" />
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <!-- 车牌数字键盘 -->
     <link rel="stylesheet" href="css/binding.css" />
+    <style>
+      .homepage {
+        width: 2.6em;
+        height: 2.6em;
+      }
+      .homepage a {
+        width: 2.2em;
+        height: 2em;
+        background-size: 2.2em 2em;
+      }
+    </style>
   </head>
 
-  <body style="overflow: hidden;">
+  <body>
+    <!-- 顶部菜单 -->
+    <div class="weui-flex invoice-head">
+      <div class="weui-flex__item return">
+        <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+      </div>
+      <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
+      <div class="homepage">
+        <a href="index.html"></a>
+      </div>
+    </div>
     <!-- 车牌 -->
     <div class="plate">
       <ul id="plate">
@@ -32,13 +54,13 @@
         </li>
       </ul>
     </div>
-    <div class="weui-form-preview">
-      <!-- 查询车牌 -->
-      <div class='demos-content-padded'>
-        <a href="javascript:;" class="weui-btn weui-btn_primary" id="inquire">查询车牌</a>
-      </div>
+    <!-- 查询车牌 -->
+    <div class='demos-content-padded'>
+      <a href="javascript:;" class="weui-btn weui-btn_primary" id="inquire">查询车牌</a>
+    </div>
+    <div id="parking_information" class="weui-form-preview parking_information">
       <!-- 停车信息 -->
-      <div id="parking_information" class="weui-form-preview__bd history-record-details parking_information">
+      <div class="weui-form-preview__bd history-record-details">
         <div class="weui-form-preview__item">
           <label class="weui-form-preview__label">车牌号码：</label>
           <span class="weui-form-preview__value">粤B123456</span>
@@ -175,7 +197,7 @@
     </div>
 
     <script src="js/jquery-2.1.4.js"></script>
-    <script src="js/jquery-weui.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/binding.js"></script>
     <script>
@@ -189,18 +211,21 @@
         onChange: function(d) {
           console.log(this, d);
         },
-        onClose: function() {
+        onClose: function() { // 选择优惠方式的回调函数
           console.log("close");
+          if($("#job").val() == "全部免费") {
+            $("#input_data input").attr('placeholder','不用填写');
+            $("#input_data input").attr('disabled',true);
+          } else if ($("#job").val() == "金额优惠") {
+            $("#input_data input").attr('disabled',false);
+            $("#input_data input").attr('placeholder','单位为（元）');
+          } else if ($("#job").val() == "时间优惠") {
+            $("#input_data input").attr('disabled',false);
+            $("#input_data input").attr('placeholder','单位为（小时）');
+          }
         },
         onOpen: function() {
           console.log("open");
-        },
-        function() {
-          if($("#job").value() === "全部免费") {
-            $("#input_data").hide();
-          } else {
-            $("#input_data").show();
-          }
         },
       });
     </script>

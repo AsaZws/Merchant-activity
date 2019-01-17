@@ -1,11 +1,16 @@
+/* 
 
+车牌数字键盘css样式
+name：Asa_Zhou
+data：2019/1/4
+
+*/
 .plate {
-    height: 6em;
-    margin-top: 1em;
+    height: 5.8em;
     overflow: hidden;
 }
 .plate ul {
-    height: 6em;
+    height: 5.8em;
     display: flex;
     justify-content: center;
 }
@@ -114,7 +119,7 @@
     left: 0;
     bottom: 0;
     z-index: 99;
-    display: none;
+    /* display: none; */
     z-index: 999;
 }
 .keyboard .shut {

@@ -109,6 +109,9 @@ a:link {
 .invoice-n {
   height: 70%;
 }
+.weui-panel {
+  margin-top: 0;
+}
 
 /* 轮播图 */
 .swiper-container {
@@ -259,7 +262,7 @@ a:link {
   border-radius: 50%;
 }
 .demos-content-padded {
-  padding: 2em;
+  padding: 1em 2em;
 }
 
 /* 历史记录 */
@@ -350,6 +353,9 @@ a:link {
   height: 1.4em;
   background: url(../images/home.png) no-repeat;
   background-size: 1.6em 1.4em;
+}
+.weui-flex__item .placeholder {
+ text-align: left;
 }
 .next-step {
   text-align: center;

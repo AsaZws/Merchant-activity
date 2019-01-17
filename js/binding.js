@@ -1,3 +1,10 @@
+/**
+ * 只在车牌页面加载
+ * 车牌数字键盘js
+ * name:Asa_Zhou
+ * data:2018/1/4
+ * 
+ */
 (function($) {
   // 获取键盘上的关闭按钮
   var oShut = $("#shut");
