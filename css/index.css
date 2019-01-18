@@ -50,11 +50,7 @@ a:link {
   color: #2d88ff;
 }
 .swiper-pagination-bullet-active {
-  opacity: 1;
   background: #2d88ff;
-}
-.swiper-container .swiper-pagination {
-  bottom: 20px;
 }
 .weui-btn_primary {
   background: #2d88ff;
@@ -112,6 +108,52 @@ a:link {
 .weui-panel {
   margin-top: 0;
 }
+.check-invoice {
+  margin-bottom: 3em;
+}
+.weui-media-box {
+  padding: 0;
+}
+
+/* 登陆页 */
+.logo {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  width: 8em;
+  height: 7.6em;
+  margin-top: 24%;
+}
+.login {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* background: #f2f2f2; */
+  background: url(../images/white-background.png) no-repeat;
+  background-size: 100% 20em;
+}
+.occlusion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2d88ff;
+  opacity: 0.2;
+}
+.login .user {
+  background: url(../images/user.png) no-repeat 0.4em;
+  background-size: 1.2em;
+  padding: 0.6em 2em;
+}
+.login .password {
+  background: url(../images/password.png) no-repeat 0.4em;
+  background-size: 1.2em;
+  padding: 0.6em 2em;
+}
 
 /* 轮播图 */
 .swiper-container {
@@ -134,38 +176,33 @@ a:link {
     z-index: 1;
 }
 .weui-grid__icon {
-  width: 4em;
-  height: 4em;
+  width: 3.6em;
+  height: 3.6em;
 }
 /* 适配苹果plus6+ */
-@media screen and (min-width:376px) and (max-width:415px) {
-  .wrap-under {
-    background: #fff;
-    width: 24rem;
-    height: 4rem;
-    border-radius: 50% 50%  0 0;
-    position: absolute;
-    top: 8.9rem;
-    left: -2.52rem;
-    z-index: 2;
+@media screen and (min-width:415px) and (max-width:560px) {
+  .banner {
+    height: 13.4em;
+  }
+}
+@media screen and (min-width:560px) {
+  .banner {
+    height: 20em;
   }
 }
 /* 大于苹果6plus的隐藏 */
-@media screen and (min-width:415px) {
+/* @media screen and (min-width:415px) {
   .wrap-under {
     display: none;
   }
-}
+} */
 /* 菜单 */
 .wrap {
   background: #fff;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-.wrap .wrap-father::before {
-  border: none;
+  /* width: 100%; */
+  /* text-align: center; */
+  /* position: relative;
+  z-index: 2; */
 }
 .wrap .wrap-chlid {
   border: none;

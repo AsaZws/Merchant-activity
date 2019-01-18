@@ -8,41 +8,36 @@
     />
     <meta name="flexible" content="initial-dpr=2" />
     <title>主页</title>
-    <!-- 手淘网适配移动端js -->
-    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body style="overflow: hidden;">
-    <div class="weui-tab">
       <div class="weui-tab__bd">
         <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
           <!-- 轮播图 -->
-          <div class="banner">
-            <div class="swiper-container">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="images/swiper-1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/swiper-1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/swiper-1.jpg" />
-                </div>
+          <div class="swiper-container banner">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="images/swiper-1.jpg" />
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
+              <div class="swiper-slide">
+                <img src="images/swiper-1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/swiper-1.jpg" />
+              </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
           <!-- 菜单 -->
-          <div class="wrap-under"></div>
+          <!-- <div class="wrap-under"></div> -->
           <!-- 底部 -->
           <div class="wrap">
-            <div class="weui-grids wrap-father">
+            <div class="weui-grids">
               <a href="preferential-vehicle.html" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
                   <img src="images/add-license-plate.png" alt="" />
@@ -68,8 +63,8 @@
           </div>
         </div>
 
-        <div id="tab2" class="weui-tab__bd-item"><a href="mine.html"></a></div>
-      </div>
+      <!-- <div id="tab2" class="weui-tab__bd-item"><a href="mine.html"></a></div>
+      </div> -->
 
       <div class="weui-tabbar">
         <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
@@ -90,7 +85,7 @@
     <script src="js/jquery-weui.min.js"></script>
     <script src="js/swiper.js"></script>
     <script>
-      $(".banner .swiper-container").swiper({
+      $(".swiper-container").swiper({
         loop: true,
         autoplay: 3000
       });

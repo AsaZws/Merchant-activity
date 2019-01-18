@@ -4,45 +4,60 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
     />
+    <meta name="flexible" content="initial-dpr=2" />
     <title>登陆</title>
-    <script src="js/base.js"></script>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      /* 登录页的背景图片 */
+      body {
+        width: 100%;
+        height: 100%;
+        background: url(images/background2.jpg) no-repeat;
+        background-size: 100%;
+      }
+      /* 输入框背景颜色 */
+      .weui-cells {
+        background-color: #f2f2f2;
+      }
+      .weui-cell__bd {
+        border: 1px solid #dcdcdc;
+        border-radius: 0.4em;
+      }
+    </style>
   </head>
-  <body>
-    <!-- 背景图外层 -->
-    <div class="wrap">
-      <!-- logo -->
-      <img src="images/logo.png" alt="logo" class="logo">
-      <div class="occlusion"></div>
-      <!-- 背景图 -->
-      <div class="wrap-background">
-        <img src="images/background2.jpg" alt="背景图" />
+  <body style="overflow: hidden;">
+    <div class="logo">
+        <img src="images/logo.png" alt="logo">
+    </div>
+    <div class="occlusion"></div>
+    <div class="login">
+      <div class='demos-content-padded'></div>
+      <div class='demos-content-padded'></div>
+      <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+          <!-- <div class="weui-cell__hd"><label class="weui-label">账号：</label></div> -->
+          <div class="weui-cell__bd">
+            <input class="weui-input user" type="text" autocomplete="off" placeholder="请输入账号">
+          </div>
+        </div>
+        <div class="weui-cell">
+          <!-- <div class="weui-cell__hd"><label class="weui-label">密码：</label></div> -->
+          <div class="weui-cell__bd">
+            <input class="weui-input password" type="password" autocomplete="off" placeholder="请输入密码">
+          </div>
+        </div>
       </div>
-      <!--css3实现波纹-->
-      <div class="wrap-waves">
-        <i class="wave w1"></i> <i class="wave w2"></i> <i class="wave w3"></i>
-        <i class="wave w4"></i>
+      <!-- 提交 -->
+      <div class='demos-content-padded'>
+        <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
       </div>
-      <!-- 账号密码输入框 -->
-      <div class="login" id="footer">    
-        <input
-          type="text"
-          class="user"
-          autocomplete="off"
-          placeholder="用户名"
-        />
-        <input
-          type="password"
-          class="password"
-          autocomplete="off"
-          placeholder="密码"
-        />
-        <span></span>
-      <a class="login-btn" href="javascript:" id="showTooltips">登陆</a>
-      </div>
-      <p class="caveat" id="caveat">用户名或密码错误！</p>
+      <div class='demos-content-padded'></div>
+    </div>
     <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
   </body>
 </html>
