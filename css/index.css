@@ -190,19 +190,9 @@ a:link {
     height: 20em;
   }
 }
-/* 大于苹果6plus的隐藏 */
-/* @media screen and (min-width:415px) {
-  .wrap-under {
-    display: none;
-  }
-} */
 /* 菜单 */
 .wrap {
   background: #fff;
-  /* width: 100%; */
-  /* text-align: center; */
-  /* position: relative;
-  z-index: 2; */
 }
 .wrap .wrap-chlid {
   border: none;
@@ -310,8 +300,16 @@ a:link {
   color: #555;
   font-size: 18px;
 }
-.weui-media-box__bd .wrap-history span {
-  color: #333;
+.weui-media-box__bd .wrap-history strong {
+  font-style: normal;
+  font-weight: 400;
+  color: #555;
+  font-size: 20px;
+}
+.weui-media-box__bd .wrap-history i {
+  font-style: normal;
+  font-weight: 400;
+  color: #555;
   font-size: 20px;
 }
 .weui-media-box__bd .wrap-history-bottom {
@@ -403,6 +401,7 @@ a:link {
 .select-all {
   font-size: 16px;
   color: #2d88ff;
+  padding-right: 0.1em;
 }
 .next-step .placeholder {
   padding: 0.58em;
@@ -411,4 +410,8 @@ a:link {
 .next-step .placeholder span {
   color: #2d88ff;
   font-size: 16px;
+}
+.next-step .placeholder i {
+  font-style: normal;
+  color: #2d88ff;
 }
