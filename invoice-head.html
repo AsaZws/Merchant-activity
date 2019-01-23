@@ -54,14 +54,21 @@
     </div>
     <!-- 提交 -->
     <div class='demos-content-padded'>
-      <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+      <a href="successful-operation.html" class="weui-btn weui-btn_primary">提交</a>
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.min.js"></script>
     <script>
-      $('.weui-form-preview__btn_default').click(function () {
-          $(this).parents('.weui-form-preview').remove()
+      $(".weui-btn_primary").bind("click",(function(){
+        var oLength;
+        $(".weui-input").each(function(){
+          oLength = $(this).val();
         })
+        if(oLength.length <= 0) {
+          alert("请输入正确的信息！");
+          event.preventDefault();  // 阻止页面跳转
+        }
+      }))
     </script>
   </body>
 </html>

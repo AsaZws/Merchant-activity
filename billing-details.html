@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>开票详情</title>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+      <!-- 顶部菜单 -->
+      <div class="weui-flex invoice-head">
+        <div class="weui-flex__item return">
+          <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+        </div>
+        <!-- <div class="weui-flex__item"><div class="placeholder">开票记录</div></div> -->
+        <div class="homepage">
+          <a href="index.html"></a>
+        </div>
+      </div>
+      <!-- 点击查看发票 -->
+      <div class="weui-cells billing">
+        <a class="weui-cell weui-cell_access show-loading" href="view-invoice.html">
+          <div class="weui-cell__hd">
+            <img
+              src="images/billing-management.png"
+              alt=""
+              style="width:20px;margin-right:5px;display:block"
+            />
+          </div>
+          <div class="weui-cell__bd weui-cell_primary">
+            <p>点击查看发票信息</p>
+          </div>
+          <span class="weui-cell__ft"></span>
+        </a>
+      </div>
+      <!-- 开票详情 -->
+      <div class="weui-cells billing">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>开票详情</p>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>开票时间：</strong><i>2019-01-22</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>开票状态：</strong><i>已开票</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>开票金额：</strong><i>200</i><i>元</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>发票抬头：</strong><i>深圳市前海智慧交通运营科技有限公司</i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 订单信息 -->
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p>订单信息</p>
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>订单号码：</strong><i>201901111111</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>缴费类型：</strong><i>钱包充值</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>充值时间：</strong><i>2019-01-12</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>充值账号：</strong><i>小招</i>
+            </p>
+            <p class="weui-media-box__title billing-recorrd">
+              <strong>充值金额：</strong><i>200</i><i>元</i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 发送到邮箱 -->
+      <div class='demos-content-padded'>
+        <a href="javascript:;" class="weui-btn weui-btn_primary" id="show-confirm">点击将发票发送到邮箱</a>
+      </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script>
+      $(document).on("click", "#show-confirm", function() {
+        $.confirm("您确定重新将电子发票发送到电子邮箱吗?", "确认发送", function() {
+          $.toast("发送成功！");
+        }, function() {
+          //取消操作
+        });
+      });
+    </script>
+  </body>
+</html>

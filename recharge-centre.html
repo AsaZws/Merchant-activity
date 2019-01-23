@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>充值中心</title>
+    <link rel="stylesheet" href="css/weui.min.css" />  
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <!-- 顶部菜单 -->
+    <div class="weui-flex invoice-head">
+      <div class="weui-flex__item return">
+        <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+      </div>
+      <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
+      <div class="weui-flex__item">
+        <a href="recharge-record.html" class="invoice-new">充值记录</a>
+      </div>
+    </div>
+    <!-- 充值方式 -->
+    <div class="weui-cells">
+      <!-- 充值金额 -->
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">充值金额：</label></div>
+        <div class="weui-cell__bd">
+          <input id="input_amount" class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入充值金额（元）">
+        </div>
+      </div>
+      <div class="weui-flex weui-cell recharge-amount">
+        <div class="weui-flex__item recharge-centre">￥<span>50</span></div>
+        <div class="weui-flex__item recharge-centre">￥<span>100</span></div>
+        <div class="weui-flex__item recharge-centre">￥<span>200</span></div>
+        <div class="weui-flex__item recharge-centre">￥<span>400</span></div>
+      </div>
+      <!-- 充值时间 -->
+      <div class="recharge-time">
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label">获得时间：</label></div>
+          <div class="weui-cell__bd">
+            <input id="get_time" class="weui-input get-time" type="number" disabled="false" pattern="[0-9]*" placeholder="请在上面输入金额">
+          </div>
+        </div>
+      </div>
+      <!-- 选择充值方式 -->
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="name" class="weui-label">使用方式：</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="job" type="text" value="点我选择充值时间">
+        </div>
+      </div>
+    </div>
+    <!-- 其他充值方式 -->
+    <!-- <div class="weui-cells" style="margin-top: 0.6em;">
+      <div class="weui-cells__title">其他充值方式</div>
+      <div class="wrap">
+        <div class="weui-grids">
+          <a href="" class="weui-grid js_grid wrap-chlid">
+            <div class="weui-grid__icon">
+              <img src="images/look-forward-to.png" alt="" />
+            </div>
+            <p class="weui-grid__label">充值时间</p>
+          </a>
+        </div>
+      </div>
+    </div> -->
+    <div class="weui-btn-area">
+      <a class="weui-btn weui-btn_primary" href="recharge-successful.html">充值</a>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script>
+      $(function() {
+        var recharge_amount;     // 充值金额
+        var get_time;     // 充值金额换算的时间
+        // 充值金额
+        $(".recharge-amount .recharge-centre").each(function(){
+          $(this).on("click",(function(){
+            $(this).addClass("on").siblings().removeClass("on");
+            recharge_amount = $(this).children("span").text();
+            $("#input_amount").val(recharge_amount);
+            // 如果选择充值时间，下面就获取到金额的对应时间
+            if($("#job").val() == "充值时间") {
+              get_time = recharge_amount / 0.83;
+              $("#get_time").val(get_time.toFixed(2));
+            };
+          }))
+        })
+        $(".weui-btn_primary").on("click",function(){
+          if($("#input_amount").val().length <= 0) {
+            alert("请输入充值金额！");
+            event.preventDefault();  // 阻止页面跳转
+          }
+        })
+        $("#job").select({
+          title: "选择充值方式",
+          items: ["充值金额", "充值时间"],
+          onChange: function(d) {
+            console.log(this, d);
+          },
+          onClose: function() { // 选择优惠方式的回调函数
+            console.log("close");
+            if ($("#job").val() == "充值金额") {
+              $(".recharge-time").hide();
+            } else if ($("#job").val() == "充值时间") {
+              $(".recharge-time").show();
+              // 当回调函数选择充值时间的时候，下面就获取到选择金额的对应时间
+              get_time = recharge_amount / 0.83;
+              $("#get_time").val(get_time.toFixed(2));
+            }
+          },
+          onOpen: function() {
+            console.log("open");
+          },
+        });
+      })
+    </script>
+  </body>
+</html>

@@ -24,7 +24,7 @@
                 </div>
                 <!-- <div class="weui-flex__item"><div class="placeholder">发票抬头</div></div> -->
                 <div class="weui-flex__item">
-                  <a href="invoice-new.html" class="invoice-new">发票抬头</a>
+                  <a href="billing-record.html" class="invoice-new">开票记录</a>
                 </div>
               </div>
               <!-- 充值记录 -->
@@ -36,10 +36,8 @@
                       <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
-                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
-                          <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="images/history.png">
-                          </div>
+                        <a href="javascript:;" class="weui-media-box_appmsg">
+                          <div class="weui-cell__hd"><img src="images/history.png"></div>
                           <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title wrap-history">
                               钱包充值 <i class="weui-media-box__title-after">元</i><strong class="weui-media-box__title-after">1.1</strong>
@@ -57,10 +55,8 @@
                       <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
-                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
-                          <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="images/history.png">
-                          </div>
+                        <a href="javascript:;" class="weui-media-box_appmsg" >
+                          <div class="weui-cell__hd"><img src="images/history.png"></div>
                           <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title wrap-history">
                               钱包充值 <i class="weui-media-box__title-after">元</i><strong class="weui-media-box__title-after">2.1</strong>
@@ -78,10 +74,8 @@
                       <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
-                        <a href="javascript:;" class="weui-media-box weui-media-box_appmsg" >
-                          <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="images/history.png">
-                          </div>
+                        <a href="javascript:;" class="weui-media-box_appmsg" >
+                          <div class="weui-cell__hd"><img src="images/history.png"></div>
                           <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title wrap-history">
                               钱包充值 <i class="weui-media-box__title-after">元</i><strong class="weui-media-box__title-after">3.1</strong>
@@ -115,7 +109,7 @@
           </div>
           <div class="weui-flex__item next-step"><div class="placeholder">金额:<span>0</span><i>元</i></div></div>
           <div class="weui-flex__item next-step">
-            <a href="#" id="next_step" class="weui-btn weui-btn_mini weui-btn_primary">下一步</a>
+            <a href="invoice-head.html" id="next_step" class="weui-btn weui-btn_mini weui-btn_primary">下一步</a>
           </div>
         </div>
       </div>
@@ -148,14 +142,19 @@
           }
         }));
 
-        $("#next_step").click(function() {   // 点击下一步，获取选中的复选框的id
+        $("#next_step").bind("click", (function() {   // 点击下一步，获取选中的复选框的id
           $("input[name='checkbox1']").each(function(){
             if($(this).is(":checked")) {
               checked_id += $(this).attr("id") + ',';
             }
           })
+          // 当没有选项的时候的警告
+          if (checked_id.length <= 0) {
+            alert("请至少选择一项开发票！");
+            event.preventDefault();  // 阻止页面跳转
+          }
           console.log(checked_id);
-        })
+        }))
 
         $("input[name='checkbox1']").each(function (){  // 遍历每个复选框，并给他们加点击事件
           $(this).click(function(){

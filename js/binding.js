@@ -10,8 +10,6 @@
   var oShut = $("#shut");
   // 获取键盘的id
   var oShutkey = $("#shutkey");
-  // 获取车牌框切换的id
-  var oPlate = $("#plate");
   // 获取号码牌的li
   var oPli = $("#plate li");
   // 获取数字拼音软键盘的每个值
@@ -147,6 +145,14 @@
         .addClass("active")
         .siblings()
         .removeClass("active");
+    });
+    // 点击查询车牌显示停车信息
+    $(document).on("click", "#inquire", function() {
+      if (oPok < 7) {
+        alert("请输入完整的车牌！")
+      } else {
+        $("#parking_information").show();
+      }
     });
   })();
 })(jQuery);

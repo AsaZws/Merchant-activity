@@ -95,7 +95,7 @@
       </div>
       <!-- 提交 -->
       <div class='demos-content-padded'>
-        <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+        <a href="offer-success.html" class="weui-btn weui-btn_primary" id="submit">提交</a>
       </div>
     </div>
     <!-- 虚拟键盘 -->
@@ -201,10 +201,22 @@
     <script src="js/swiper.js"></script>
     <script src="js/binding.js"></script>
     <script>
-      // 点击查询车牌显示停车信息
-      $(document).on("click", "#inquire", function() {
-          $("#parking_information").show();
-        });
+      $("#submit").bind("click",(function(){
+        if($("#job").val() == "点我选择优惠方式" || $("#job").val() == "") {
+          alert("请选择优惠方式！");
+          event.preventDefault();  // 阻止页面跳转
+        } else if($("#job").val() == "金额优惠") {
+          if ($("#input_data input").val().length <= 0) {
+            alert("请输入数值！");
+            event.preventDefault();  // 阻止页面跳转
+          }
+        } else if($("#job").val() == "时间优惠") {
+          if ($("#input_data input").val().length <= 0) {
+            alert("请输入数值！");
+            event.preventDefault();  // 阻止页面跳转
+          }
+        }
+      }))
       $("#job").select({
         title: "选择优惠方式",
         items: ["金额优惠", "时间优惠", "全部免费"],
@@ -216,6 +228,7 @@
           if($("#job").val() == "全部免费") {
             $("#input_data input").attr('placeholder','不用填写');
             $("#input_data input").attr('disabled',true);
+            $("#input_data input").val("");
           } else if ($("#job").val() == "金额优惠") {
             $("#input_data input").attr('disabled',false);
             $("#input_data input").attr('placeholder','单位为（元）');
