@@ -431,6 +431,10 @@ a:link {
 .billing {
   margin-bottom: 0.4em;
 }
+.weui-icon-cancel{
+  color:#f2f2f2;
+  font-size:36px;
+}
 
 /* 充值 */
 .recharge-centre {
