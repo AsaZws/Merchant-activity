@@ -7,7 +7,4 @@
 
 部分截图：
 
-<img src="images/111.png" width="400">
-<img src="images/222.png" width="400">
-<img src="images/333.png" width="400">
-<img src="images/444.png" width="400">
+<img src="images/111.png" width="400"><img src="images/222.png" width="400"><img src="images/333.png" width="400"><img src="images/444.png" width="400">
