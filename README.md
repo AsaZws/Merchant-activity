@@ -1,4 +1,4 @@
-登陆页面：https://asazws.github.io/Merchant-activity/login.html
+登陆页面：https://asazws.github.io/Merchant-activity/login.html  
 主页面：https://asazws.github.io/Merchant-activity/index.html
 
 # 商家停车优惠及停车电子发票逻辑页面
@@ -7,7 +7,7 @@
 
 部分截图：
 
-![Image](images/111.png)
-![Image](images/222.png)
-![Image](images/333.png)
-![Image](images/444.png)
+![Image](images/111.png){:width="200px"}
+![Image](images/222.png){:width="200px"}
+![Image](images/333.png){:width="200px"}
+![Image](images/444.png){:width="200px"}
