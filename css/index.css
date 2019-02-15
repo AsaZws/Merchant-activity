@@ -125,7 +125,7 @@ a:link {
 .logo img {
   width: 8em;
   height: 7.6em;
-  margin-top: 24%;
+  margin-top: 14%;
 }
 .login {
   width: 100%;
@@ -288,7 +288,11 @@ a:link {
   border-radius: 50%;
 }
 .demos-content-padded {
+  padding: 2em 2em;
+}
+.demos-content-paddeds {
   padding: 1em 2em;
+  background-color: #f2f2f2;
 }
 
 /* 历史记录 */
