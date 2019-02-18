@@ -1,4 +1,4 @@
-/* 
+﻿/* 
 
 主页面css样式
 name：Asa_Zhou
@@ -125,7 +125,7 @@ a:link {
 .logo img {
   width: 8em;
   height: 7.6em;
-  margin-top: 14%;
+  margin-top: 12%;
 }
 .login {
   width: 100%;
@@ -288,7 +288,7 @@ a:link {
   border-radius: 50%;
 }
 .demos-content-padded {
-  padding: 2em 2em;
+  padding: 1.6em 2em;
 }
 .demos-content-paddeds {
   padding: 1em 2em;
