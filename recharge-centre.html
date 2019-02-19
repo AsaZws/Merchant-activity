@@ -33,11 +33,14 @@
           <input id="input_amount" class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入充值金额（元）">
         </div>
       </div>
+      <!-- 金额选择，每行4个自动换行 -->
       <div class="weui-flex weui-cell recharge-amount">
         <div class="weui-flex__item recharge-centre">￥<span>50</span></div>
         <div class="weui-flex__item recharge-centre">￥<span>100</span></div>
         <div class="weui-flex__item recharge-centre">￥<span>200</span></div>
         <div class="weui-flex__item recharge-centre">￥<span>400</span></div>
+        <div class="weui-flex__item recharge-centre">￥<span>500</span></div>
+        <div class="weui-flex__item recharge-centre">￥<span>600</span></div>
       </div>
       <!-- 充值时间 -->
       <div class="recharge-time">
@@ -82,7 +85,7 @@
         // 充值金额
         $(".recharge-amount .recharge-centre").each(function(){
           $(this).on("click",(function(){
-            $(this).addClass("on").siblings().removeClass("on");
+            $(this).addClass("on").siblings(".recharge-centre").removeClass("on");
             recharge_amount = $(this).children("span").text();
             $("#input_amount").val(recharge_amount);
             // 如果选择充值时间，下面就获取到金额的对应时间
