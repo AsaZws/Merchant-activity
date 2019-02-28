@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="flexible" content="initial-dpr=2" />
+    <title>信息提交</title>
+    <link rel="stylesheet" href="css/weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      body {
+          font-size: 16px;
+          background-color: #fff; 
+        }
+      .demos-content-paddeds {
+        padding: 1em 1em;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 抬头 -->
+    <div class="weui-flex invoice-head">
+      <div class="weui-flex__item return">
+        <a href="javascript:;" onClick="javascript :history.back(-1);" class="invoice-return">返回</a>
+      </div>
+      <!-- <div class="weui-flex__item"><div class="placeholder">填写信息</div></div> -->
+      <div class="homepage">
+        <a href="index.html"></a>
+      </div>
+    </div>
+    <!-- 个人信息 -->
+    <div class="weui-cells__title">填写信息</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入您的姓名">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">联系电话：</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入您的联系方式">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">公司名称：</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入您的公司名称">
+        </div>
+      </div>
+    </div>
+    <!-- 选择项目 -->
+    <div class="weui-cells__title">选择项目</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="name" class="weui-label">选择项目:</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="in" type="text" value="工商注册">
+        </div>
+      </div>
+    </div>
+    <!-- 请输入其他需求 -->
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="这里可以输入其他需求" rows="3"></textarea>
+          <div class="weui-textarea-counter"><span>0</span>/200</div>
+        </div>
+      </div>
+    </div>
+    <!-- 立即申请 -->
+    <div class='demos-content-paddeds'>
+      <a href="submit-success.html" class="weui-btn weui-btn_primary open-popup" data-target="#full">提交信息</a>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script>
+      $("#in").select({
+        title: "您要申请的项目",
+        multi: true,
+        min: 1,
+        max: 10,
+        items: [
+          {
+            title: "工商注册",
+            value: 1,
+            description: "额外的数据1"
+          },
+          {
+            title: "地址托管",
+            value: 2,
+            description: "额外的数据2"
+          },
+          {
+            title: "政策咨询",
+            value: 3,
+            description: "额外的数据3"
+          },
+          {
+            title: "工商变更",
+            value: 4,
+            description: "额外的数据4"
+          },
+          {
+            title: "年报公示",
+            value: 5,
+            description: "额外的数据5"
+          },
+          {
+            title: "许可证办理",
+            value: 6,
+            description: "额外的数据6"
+          },
+          {
+            title: "公司注销",
+            value: 7,
+            description: "额外的数据6"
+          },
+        ],
+        beforeClose: function(values, titles) {
+          if(values.indexOf("7") !== -1) {
+            $.toast("不能选择公司注销", "cancel");
+            return false;
+          }
+          return true;
+        },
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function (d) {
+          console.log('close')
+        }
+      });
+    </script>
+  </body>
+</html>

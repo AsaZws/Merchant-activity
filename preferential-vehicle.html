@@ -8,23 +8,16 @@
     />
     <meta name="flexible" content="initial-dpr=2" />
     <title>停车优惠</title>
-    <!-- 手淘网适配移动端js -->
     <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <link rel="stylesheet" href="css/weui.min.css" />
-    <link rel="stylesheet" href="css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="css/jquery-weui.min.css" />  
     <link rel="stylesheet" href="css/index.css" />
     <!-- 车牌数字键盘 -->
     <link rel="stylesheet" href="css/binding.css" />
     <style>
-      .homepage {
-        width: 2.6em;
-        height: 2.6em;
-      }
-      .homepage a {
-        width: 2.2em;
-        height: 2em;
-        background-size: 2.2em 2em;
-      }
+    .demos-content-paddeds {
+      padding: 0 2em 1em;
+    }
     </style>
   </head>
 
@@ -55,9 +48,10 @@
       </ul>
     </div>
     <!-- 查询车牌 -->
-    <div class='demos-content-padded'>
+    <div class='demos-content-paddeds'>
       <a href="javascript:;" class="weui-btn weui-btn_primary" id="inquire">查询车牌</a>
     </div>
+
     <div id="parking_information" class="weui-form-preview parking_information">
       <!-- 停车信息 -->
       <div class="weui-form-preview__bd history-record-details">
@@ -240,6 +234,26 @@
         onOpen: function() {
           console.log("open");
         },
+      });
+      // 点击查询车牌显示车牌号码
+      $(document).on("click", "#inquire", function() {
+      // 获取号码牌的li
+      var oPli = $("#plate li");
+        // 车牌号码
+        var oStr;
+        if ( oPli.eq(7).text().length > 1 ) {
+          // 如果大于1，显示前7位
+          oStr = $("#plate li:lt(7)").text();
+        } else {
+          // 最后一位输入车牌就显示8位
+          oStr = $("#plate li:lt(8)").text();
+        };
+        console.log(oStr);
+        if (oStr.length < 7) {
+          alert("请输入完整的车牌！")
+        } else {
+          $("#parking_information").show();
+        }
       });
     </script>
   </body>

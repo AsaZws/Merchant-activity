@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/jquery-weui.min.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body style="overflow: hidden; background-color: #fff;">
-      <div class="page" style="padding-bottom: 55px;" id="123">
+  <body style="overflow: hidden;">
+      <!-- <div class="weui-tab__bd"> -->
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
           <!-- 轮播图 -->
           <div class="swiper-container banner">
             <!-- Additional required wrapper -->
@@ -32,88 +33,96 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
-
-          <div class="bd wrap" style="overflow:auto;">
-            <!-- 九宫格 -->
+          <!-- 菜单 -->
+          <!-- <div class="wrap-under"></div> -->
+          <!-- 底部 -->
+          <div class="wrap">
             <div class="weui-grids">
               <a href="preferential-vehicle.html" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/add-license-plate2.png" alt="" />
+                  <img src="images/add-license-plate.png" alt="" />
                 </div>
                 <p class="weui-grid__label">优惠车辆</p>
               </a>
 
               <a href="history.html" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/add-recording2.png" alt="" />
+                  <img src="images/add-recording.png" alt="" />
                 </div>
                 <p class="weui-grid__label">优惠记录</p>
               </a>
 
-              <a href="business-agent.html" class="weui-grid js_grid wrap-chlid">
+              <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/business-agent2.png" alt="" />
+                  <img src="images/business-agent.png" alt="" />
                 </div>
                 <p class="weui-grid__label">工商代理</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/financial-law2.png" alt="" />
+                  <img src="images/financial-law.png" alt="" />
                 </div>
                 <p class="weui-grid__label">财务法务</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/human-resources2.png" alt="" />
+                  <img src="images/human-resources.png" alt="" />
                 </div>
                 <p class="weui-grid__label">人力资源</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/space-management2.png" alt="" />
+                  <img src="images/space-management.png" alt="" />
                 </div>
                 <p class="weui-grid__label">空间管理</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/qualification-report2.png" alt="" />
+                  <img src="images/qualification-report.png" alt="" />
                 </div>
                 <p class="weui-grid__label">资质申报</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/event-planning2.png" alt="" />
+                  <img src="images/event-planning.png" alt="" />
                 </div>
                 <p class="weui-grid__label">活动策划</p>
               </a>
 
               <a href="" class="weui-grid js_grid wrap-chlid">
                 <div class="weui-grid__icon">
-                  <img src="images/administrative-procurement2.png" alt="" />
+                  <img src="images/administrative-procurement.png" alt="" />
                 </div>
                 <p class="weui-grid__label">行政采购</p>
               </a>
+
             </div>
+          </div>
         </div>
-        <div class="weui-tabbar" style="position: fixed;bottom: 0;">
-          <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
-            <div class="weui-tabbar__icon">
-              <img src="images/home-on.png" alt="主页" />
-            </div>
-            <p class="weui-tabbar__label">主页</p>
-          </a>
-          <a href="mine.html" class="weui-tabbar__item">
-            <div class="weui-tabbar__icon">
-              <img src="images/nav-my-off.png" alt="我的" />
-            </div>
-            <p class="weui-tabbar__label">我的</p>
-          </a>
-        </div>
+
+      <!-- <div id="tab2" class="weui-tab__bd-item"><a href="mine.html"></a></div>
+      </div> -->
+
+      <div class="weui-tabbar">
+        <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+          <div class="weui-tabbar__icon">
+            <img src="images/home-on.png" alt="主页" />
+          </div>
+          <p class="weui-tabbar__label">主页</p>
+        </a>
+        <a href="mine.html" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <img src="images/nav-my-off.png" alt="我的" />
+          </div>
+          <p class="weui-tabbar__label">我的</p>
+        </a>
+      </div>
+    <!-- </div> -->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-weui.min.js"></script>
     <script src="js/swiper.js"></script>
@@ -123,5 +132,6 @@
         autoplay: 3000
       });
     </script>
+    <script></script>
   </body>
 </html>

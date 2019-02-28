@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* 
+
+车牌数字键盘css样式
+name：Asa_Zhou
+data：2019/1/4
+
+*/
+.plate {
+  height: 5.8em;
+  overflow: hidden; }
+  .plate ul {
+    height: 5.8em;
+    display: flex;
+    justify-content: center; }
+  .plate li {
+    width: 1.88em;
+    height: 2.8em;
+    line-height: 2.8em;
+    border: 1px solid #eee;
+    margin-right: -1px;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center; }
+  .plate .active {
+    border: 1px solid #428bca;
+    z-index: 99; }
+  .plate li .new {
+    color: #428bca; }
+  .plate li:nth-last-child(1) span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    line-height: 0.88em;
+    font-size: 0.4rem;
+    border: 1px solid #428bca;
+    border-radius: 50%;
+    margin: 0.6em auto 0; }
+  .plate li:nth-last-child(1) i {
+    display: block;
+    font-style: normal;
+    font-size: 0.56em;
+    line-height: 2em;
+    margin-bottom: 0.2rem; }
+  .plate li:nth-child(2) {
+    margin-right: 0.4rem; }
+
+/* 手机屏幕大于410的屏幕 */
+@media screen and (min-width: 410px) {
+  .plate {
+    height: 6.6em;
+    margin-top: 1em;
+    overflow: hidden; }
+    .plate ul {
+      height: 6.6em;
+      display: flex;
+      justify-content: center; }
+    .plate li {
+      width: 2em;
+      height: 3em;
+      line-height: 3em;
+      border: 0.02rem solid #eee;
+      margin-right: -1px;
+      background-color: #fff;
+      font-size: 22px;
+      text-align: center; }
+      .plate li:nth-last-child(1) span {
+        display: block;
+        width: 0.46rem;
+        height: 0.46rem;
+        line-height: 0.2rem;
+        font-size: 0.24rem;
+        border: 0.01rem solid #428bca;
+        border-radius: 50%;
+        margin: 0.48rem auto 0; }
+      .plate li:nth-last-child(1) i {
+        display: block;
+        font-size: 0.4rem;
+        line-height: 0.8rem;
+        margin-bottom: 0.8rem; }
+      .plate li:nth-child(2) {
+        margin-right: 0.4rem; } }
+/* 手机屏幕小于360的屏幕 */
+@media screen and (max-width: 360px) {
+  .plate li {
+    width: 1.6em;
+    height: 3em;
+    line-height: 3em;
+    border: 0.02rem solid #eee;
+    margin-right: -1px;
+    background-color: #fff;
+    font-size: 22px;
+    text-align: center; } }
+/* 父级基础字号 */
+.keyboard-footer {
+  font-size: 16px; }
+
+/* 数字拼音键盘 */
+.keyboard {
+  /* height: 5.4rem; */
+  background-color: #eceef1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  /* display: none; */
+  z-index: 999; }
+  .keyboard .shut {
+    height: 2em;
+    line-height: 2em;
+    text-align: right;
+    padding: 0 0.5em;
+    font-size: 0.875em;
+    background-color: #f9f9f9;
+    color: #333;
+    border-bottom: 0.03125em solid #ddd;
+    border-top: 0.03125em solid #eee; }
+  .keyboard ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5em 0.25em 0;
+    list-style: none; }
+  .keyboard li, .keyboard .delet {
+    /* width: 0.66rem; */
+    width: 9%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #fff;
+    font-size: 1em;
+    color: #333;
+    margin: 0 0.25em 0.5em 0;
+    box-shadow: 0 0.125em 0 #aaa;
+    list-style: none; }
+  .keyboard li:active, .keyboard .delet:active {
+    background: #999; }
+  .keyboard li:nth-child(10n) {
+    margin-right: 0; }
+  .keyboard .delet {
+    width: 3.25em; }
+
+/* 地区简称的键盘 */
+.area {
+  width: 100%;
+  background-color: #eceef1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none; }
+  .area .shut {
+    height: 2em;
+    line-height: 2em;
+    text-align: right;
+    padding: 0 0.5em;
+    font-size: 0.875em;
+    background-color: #f9f9f9;
+    color: #333;
+    border-bottom: 0.03125em solid #ddd;
+    border-top: 0.03125em solid #eee; }
+  .area ul {
+    padding: 0.5em 0.25em 0;
+    list-style: none; }
+  .area .area-one, .area .area-tow, .area .area-three, .area .area-four {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .area li {
+    /* width: 0.66rem; */
+    width: 9%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #fff;
+    font-size: 1em;
+    color: #333;
+    margin: 0 0.25em 0.5em 0;
+    box-shadow: 0 0.125em 0 #aaa;
+    list-style: none; }
+    .area li:active {
+      background: #999; }
+    .area li:nth-child(10n) {
+      margin-right: 0; }
+
+/* 手机屏幕大于450的屏幕 */
+@media screen and (min-width: 450px) {
+  .keyboard li, .area li {
+    width: 2.0625em; } }
+/* 手机屏幕小于370px的屏幕 */
+@media screen and (max-width: 370px) {
+  .keyboard li, .area li {
+    /* width: 0.54rem; */
+    width: 8.8%;
+    height: 2.5em;
+    line-height: 2.5em; } }
+
+/*# sourceMappingURL=binding.css.map */

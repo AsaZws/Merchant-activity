@@ -146,13 +146,5 @@
         .siblings()
         .removeClass("active");
     });
-    // 点击查询车牌显示停车信息
-    $(document).on("click", "#inquire", function() {
-      if (oPok < 7) {
-        alert("请输入完整的车牌！")
-      } else {
-        $("#parking_information").show();
-      }
-    });
   })();
 })(jQuery);

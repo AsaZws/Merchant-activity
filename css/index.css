@@ -7,7 +7,7 @@ data：2019/1/4
 */
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   background: #f2f2f2;
 }
 html,
@@ -41,7 +41,7 @@ a {
 a:link {
   text-decoration: none;
 }
-/* 修改weiui */
+/******************************************* 修改weiui *****************************************/
 .cancel {
   color: #2d88ff;
 }
@@ -71,7 +71,7 @@ a:link {
   margin-bottom: 1em;
 }
 .weui-label {
-  color: #888;
+  color: #444;
 }
 .toolbar {
   height: 2em;
@@ -113,6 +113,9 @@ a:link {
 }
 .check-invoice {
   margin-bottom: 2.8em;
+}
+.weui-icon-success {
+  color: #2d88ff;
 }
 
 /* 登陆页 */
@@ -175,8 +178,8 @@ a:link {
     z-index: 1;
 }
 .weui-grid__icon {
-  width: 3.6em;
-  height: 3.6em;
+  width: 3em;
+  height: 3em;
 }
 /* 适配苹果plus6+ */
 @media screen and (min-width:415px) and (max-width:560px) {
@@ -195,11 +198,11 @@ a:link {
 }
 .wrap .wrap-chlid {
   border: none;
-  padding: 0.6em;
+  padding: 0.8em;
 }
-.wrap .wrap-chlid::before, .wrap .wrap-chlid::after {
+/* .wrap .wrap-chlid::before, .wrap .wrap-chlid::after {
   border: none;
-}
+} */
 
 /* 我的 */
 .header {
@@ -381,7 +384,8 @@ a:link {
   background-size: 1.6em 1.4em;
 }
 .weui-flex__item .placeholder {
- text-align: left;
+ text-align: center;
+ font-size: 1.2em;
 }
 .next-step {
   text-align: center;
@@ -458,4 +462,63 @@ a:link {
 }
 .get-time {
   color: #000;
+}
+
+/* 工商代理 */
+.track-rcol {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+}
+.track-rcol img {
+  width: 100%;
+}
+.track-rcol .processing-process {
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 16px 0 16px;
+  padding-left: 48px;
+  background: url(../images/processing-process.png) 0 12px no-repeat;
+  background-size: 36px;
+  color: #2d88ff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.track-rcol p {
+  color: #666;
+  padding: 6px 18px 0;
+  text-indent: 36px;
+}
+.track-list {
+  margin: 20px;
+  padding-left: 6px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.track-list li {
+  position: relative;
+  padding: 24px 0 0 24px;
+  line-height: 18px;
+  border-left: 1px dashed #2d88ff;
+  color: #787878;
+}
+.track-list li.first {
+  padding-top: 0;
+}
+.track-list li .node-icon {
+  position: absolute;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 33%;
+  background-color: #2d88ff;
+  box-shadow: 0 0 4px #2d88ff;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  z-index: 1;
+}
+.track-list li .txt {
+  position: relative;
 }
