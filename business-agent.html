@@ -12,16 +12,15 @@
     <link rel="stylesheet" href="css/index.css" />
     <style>
       .demos-content-paddeds {
-        /* padding: 0 1em 1em; */
-        background-color: #fff;
+        padding: 0;
+        width: 100%;
+      }
+      .weui-tabbar:before {
+        border-top: 0;
+      }
+      .track-bottom {
         position: fixed;
         bottom: 0;
-        z-index: 99;
-        /* width: auto; */
-      }
-      .weui-btn_primary {
-        width: 100%;
-        width: auto;
       }
     </style>
   </head>
@@ -37,7 +36,6 @@
       </div>
     </div>
     <div class="track-rcol">
-      <img src="images/business-agent3.png" alt="工商代理">
       <h4 class="processing-process">服务与承诺</h4>
       <!-- <p>公司通过整合近300家优质的线下供应商资源，建立深度战略合作伙伴关系，快速响应客户需求,为您提供一站式的高端企业服务整体解决方案，助力您的企业降本提效、运营无忧！</p> -->
       <div class="track-list">
@@ -61,9 +59,11 @@
         </ul>
       </div>
     </div>
-    <!-- 立即申请 -->
-    <div class='demos-content-padded demos-content-paddeds'>
-      <a href="submit-business-agent.html" class="weui-btn weui-btn_primary">发起申请</a>
+    <div class="weui-tabbar track-bottom">
+      <!-- 立即申请 -->
+      <div class='demos-content-paddeds'>
+        <a href="submit-business-agent.html" class="weui-btn weui-btn_default">发起申请</a>
+      </div>
     </div>
   </body>
 </html>
